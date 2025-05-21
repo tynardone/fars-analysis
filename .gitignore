@@ -183,4 +183,4 @@ cython_debug/
 
 # Data Files
 fars_data*/
-.db
+*.db
