@@ -181,5 +181,6 @@ cython_debug/
 .cursorindexingignore
 
 
-# Raw data files
+# Data Files
 fars_data*/
+.db
