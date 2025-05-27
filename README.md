@@ -176,6 +176,8 @@ vehicle.
 
 This is a star schema with `accident.csv` as the fact table and everything else a dimension related by the id ST_CASE.
 
+Accident -> vehicle, parkwork
+
 ## References
 
 - National Highway Traffic Safety Administration. *FARS/CRSS Coding and Validation Manual* (2023). U.S. Department of Transportation. [Link](<https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813695>)

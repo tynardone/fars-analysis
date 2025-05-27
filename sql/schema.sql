@@ -42,8 +42,6 @@ CREATE TABLE accident (
     wrk_zone INTEGER,
     rel_road INTEGER,
     lgt_cond INTEGER,
-    weather1 INTEGER,
-    weather2 INTEGER,
     weather INTEGER,
     sch_bus INTEGER,
     rail TEXT,
@@ -189,8 +187,73 @@ CREATE TABLE cevent (
     FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
 
+CREATE TABLE vevent (
+    state INTEGER,
+    st_case INTEGER,
+    veh_no INTEGER,
+    eventnum INTEGER,
+    veventnum INTEGER,
+    PRIMARY KEY (st_case, veh_no, veventnum),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
 
-CREATE TABLE person()
-CREATE TABLE violation()
+CREATE TABLE vsoe (
+    state INTEGER,
+    st_case INTEGER,
+    veventnum INTEGER,
+    veh_no INTEGER
+)
+
+CREATE TABLE county (
+    PRIMARY KEY county INTEGER,
+    county_name TEXT
+);
+
+CREATE TABLE city (
+    PRIMARY KEY city INTEGER,
+    city_name TEXT
+);
+
+
+
+CREATE TABLE crashrf (
+
+)
+CREATE TABLE damage()
+CREATE TABLE distract()
 CREATE TABLE drimpair()
+CREATE TABLE driverrf()
+CREATE TABLE drugs()
+CREATE TABLE factor()
+CREATE TABLE maneuver()
+CREATE TABLE miacc()
+CREATE TABLE midrvacc()
+CREATE TABLE miper()
+CREATE TABLE nmcrash()
+CREATE TABLE nmdistract()
+CREATE TABLE nmimpair()
+CREATE TABLE nmprior()
+CREATE TABLE parkwork()
+CREATE TABLE pbtype()
+CREATE TABLE person()
+CREATE TABLE personrf()
+CREATE TABLE pvehiclesf()
+CREATE TABLE race()
+CREATE TABLE safetyeq()
+CREATE TABLE vehicle()
+CREATE TABLE vehiclesf()
+
+CREATE TABLE violatn()
+CREATE TABLE vision()
+
+CREATE TABLE vpicdecode (
+    PRIMARY KEY (st_case, veh_no)
+);
+CREATE TABLE vpictrailerdecode (
+    PRIMARY KEY (st_case, veh_no)
+);
+
+CREATE TABLE vsoe()
+CREATE TABLE weather()
+
 
