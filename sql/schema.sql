@@ -471,7 +471,6 @@ CREATE TABLE city (
     city_name TEXT
 );
 
-
 CREATE TABLE state (
     state INTEGER PRIMARY KEY NOT NULL,
     name TEXT
@@ -479,9 +478,13 @@ CREATE TABLE state (
 
 CREATE TABLE route (
     route INTEGER PRIMARY KEY NOT NULL,
-    route_name TEXT,
+    route_name TEXT
 );
 
+CREATE TABLE func_sys (
+    func_sys INTEGER PRIMARY KEY NOT NULL,
+    func_sysname TEXT
+);
 
 
 
