@@ -1,10 +1,6 @@
 
--- Central Fact Table: Accident
-CREATE TABLE state (
-    state INTEGER PRIMARY KEY NOT NULL,
-    name TEXT,
-);
 
+-- CRASH LEVEL - Central Table accident
 CREATE TABLE accident (
     state INTEGER,
     st_case INTEGER PRIMARY KEY NOT NULL,
@@ -59,6 +55,23 @@ CREATE TABLE accident (
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
+CREATE TABLE crashrf (
+    state INTEGER,
+    st_case INTEGER,
+    crashrf INTEGER,
+    crashrf_name TEXT,
+    PRIMARY KEY (st_case, crashrf)
+
+);
+
+CREATE TABLE weather (
+    weather INTEGER,
+    weather_name TEXT,
+    PRIMARY KEY (weather)
+);
+
+
+-- VEHICLE LEVEL
 CREATE TABLE vehicle (
     state INTEGER,
     st_case INTEGER,
@@ -173,6 +186,36 @@ CREATE TABLE vehicle (
     FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
 
+CREATE TABLE vehiclesf (
+    st_case INTEGER,
+    veh_no INTEGER,
+    vehiclesf INTEGER,
+    PRIMARY KEY (st_case, veh_no, vehiclesf),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+CREATE TABLE damage();
+CREATE TABLE distract();
+CREATE TABLE drimpair();
+CREATE TABLE driverrf();
+
+CREATE TABLE factor();
+
+CREATE TABLE maneuver();
+CREATE TABLE vpicdecode (
+    PRIMARY KEY (st_case, veh_no)
+);
+CREATE TABLE vpictrailerdecode (
+    PRIMARY KEY (st_case, veh_no)
+);
+
+CREATE TABLE pvehiclesf();
+CREATE TABLE violatn();
+CREATE TABLE vision();
+
+
+
+-- EVENT LEVEL
+
 CREATE TABLE cevent (
     state INTEGER,
     st_case INTEGER,
@@ -202,8 +245,19 @@ CREATE TABLE vsoe (
     st_case INTEGER,
     veventnum INTEGER,
     veh_no INTEGER
-)
+);
 
+-- PERSON LEVEL
+CREATE TABLE person ();
+CREATE TABLE drugs();
+CREATE TABLE personrf();
+CREATE TABLE race();
+CREATE TABLE nmcrash();
+CREATE TABLE nmdistract();
+CREATE TABLE nmimpair();
+CREATE TABLE nmprior();
+
+-- NEW TABLES
 CREATE TABLE county (
     PRIMARY KEY county INTEGER,
     county_name TEXT
@@ -215,45 +269,24 @@ CREATE TABLE city (
 );
 
 
-
-CREATE TABLE crashrf (
-
-)
-CREATE TABLE damage()
-CREATE TABLE distract()
-CREATE TABLE drimpair()
-CREATE TABLE driverrf()
-CREATE TABLE drugs()
-CREATE TABLE factor()
-CREATE TABLE maneuver()
-CREATE TABLE miacc()
-CREATE TABLE midrvacc()
-CREATE TABLE miper()
-CREATE TABLE nmcrash()
-CREATE TABLE nmdistract()
-CREATE TABLE nmimpair()
-CREATE TABLE nmprior()
-CREATE TABLE parkwork()
-CREATE TABLE pbtype()
-CREATE TABLE person()
-CREATE TABLE personrf()
-CREATE TABLE pvehiclesf()
-CREATE TABLE race()
-CREATE TABLE safetyeq()
-CREATE TABLE vehicle()
-CREATE TABLE vehiclesf()
-
-CREATE TABLE violatn()
-CREATE TABLE vision()
-
-CREATE TABLE vpicdecode (
-    PRIMARY KEY (st_case, veh_no)
-);
-CREATE TABLE vpictrailerdecode (
-    PRIMARY KEY (st_case, veh_no)
+CREATE TABLE state (
+    state INTEGER PRIMARY KEY NOT NULL,
+    name TEXT,
 );
 
-CREATE TABLE vsoe()
-CREATE TABLE weather()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
