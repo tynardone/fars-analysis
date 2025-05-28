@@ -16,8 +16,10 @@ CREATE TABLE accident (
     city INTEGER,
     day INTEGER,
     month INTEGER,
+    month_name TEXT,
     year INTEGER,
     day_week INTEGER,
+    day_week_name TEXT,
     hour INTEGER,
     minute INTEGER,
     nhs INTEGER,
@@ -53,7 +55,9 @@ CREATE TABLE accident (
     cf3 INTEGER,
     fatals INTEGER,
     drunk_dr INTEGER,
-    FOREIGN KEY(state) REFERENCES state(state)
+    FOREIGN KEY(state) REFERENCES state(state),
+    FOREIGN KEY(country) REFERENCES county(county),
+    FOREIGN KEY(city) REFERENCES city(city)
 );
 
 -- REFERENCES accident table
@@ -409,19 +413,43 @@ CREATE TABLE vsoe (
 
 -- PERSON LEVEL
 -----------------------------------------
+-- REFERENCES accident table with st_case
+-- REFERENCE vehicle or parkwork with st_case and veh_no for motor vehicle occupants
 CREATE TABLE person (
     st_case INTEGER,
     state INTEGER,
     veh_no INTEGER,
     per_no INTEGER,
-    PRIMARY KEY(st_case, veh_no, per_no)
-    FOREIGN KEY(
+    PRIMARY KEY(st_case, veh_no, per_no),
+    FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
+
+-- REFERENCE accident table with st_case
+CREATE TABLE pbtype (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    per_no INTEGER,
+    PRIMARY KEY(st_case, veh_no, per_no),
+    FOREIGN KEY(st_case) REFERENCES accident(st_case)
+);
+
+
+-- REFERENCE person table. veh_no = 0 for all records in this table
+CREATE TABLE safetyeq (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    per_no INTEGER,
+    PRIMARY KEY(st_case, per_no),
+    FOREIGN KEY(st_case, veh_no, per_no) REFERENCES person(st_case, veh_no, per_no)
+);
+
 CREATE TABLE drugs (
 );
-CREATE TABLE personrf (
-);
 CREATE TABLE race (
+);
+CREATE TABLE personrf (
 );
 CREATE TABLE nmcrash (
 );
@@ -439,14 +467,19 @@ CREATE TABLE county (
 );
 
 CREATE TABLE city (
-    PRIMARY KEY city INTEGER,
+    city INTEGER PRIMARY KEY NOT NULL,
     city_name TEXT
 );
 
 
 CREATE TABLE state (
     state INTEGER PRIMARY KEY NOT NULL,
-    name TEXT,
+    name TEXT
+);
+
+CREATE TABLE route (
+    route INTEGER PRIMARY KEY NOT NULL,
+    route_name TEXT,
 );
 
 
