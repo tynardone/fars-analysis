@@ -62,14 +62,14 @@ CREATE TABLE crashrf (
     st_case INTEGER,
     crashrf INTEGER,
     crashrf_name TEXT,
-    PRIMARY KEY (st_case, crashrf)
+    PRIMARY KEY(st_case, crashrf)
 
 );
 
 CREATE TABLE weather (
     weather INTEGER,
     weather_name TEXT,
-    PRIMARY KEY (weather)
+    PRIMARY KEY(weather)
 );
 
 
@@ -185,7 +185,7 @@ CREATE TABLE vehicle (
     trlr3vin TEXT,
     deaths INTEGER,
     dr_drink INTEGER,
-    PRIMARY KEY (st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state),
     FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
@@ -254,7 +254,7 @@ CREATE TABLE parkwork (
     pvin_12 TEXT,
     ptrailer INTEGER,
     pdeaths INTEGER,
-    PRIMARY KEY (st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -264,8 +264,8 @@ CREATE TABLE vehiclesf (
     state INTEGER,
     veh_no INTEGER,
     vehiclesf INTEGER,
-    PRIMARY KEY (st_case, veh_no, vehiclesf),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+    PRIMARY KEY(st_case, veh_no, vehiclesf),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -275,8 +275,8 @@ state INTEGER,
 veh_no INTEGER,
 damage INTEGER,
 damage_name TEXT,
-PRIMARY KEY (st_case, veh_no, damage),
-FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+PRIMARY KEY(st_case, veh_no, damage),
+FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
 FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -286,8 +286,8 @@ CREATE TABLE distract (
     veh_no INTEGER,
     drdistract INTEGER,
     drdistract_name TEXT,
-    PRIMARY KEY (st_case, veh_no, drdistract),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, drdistract),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -297,8 +297,8 @@ CREATE TABLE drimpair (
     veh_no INTEGER,
     drimpair INTEGER,
     drimpair_name TEXT,
-    PRIMARY KEY (st_case, veh_no, drimpair),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, drimpair),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -308,8 +308,8 @@ CREATE TABLE driverrf (
     veh_no INTEGER,
     driverrf INTEGER,
     driverrf_name TEXT,
-    PRIMARY KEY (st_case, veh_no, driverrf),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, driverrf),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -319,8 +319,8 @@ CREATE TABLE factor (
     veh_no INTEGER,
     vehiclecc INTEGER,
     vehiclecc_name TEXT,
-    PRIMARY KEY (st_case, veh_no, vehiclecc),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, vehiclecc),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -330,8 +330,8 @@ CREATE TABLE maneuver (
     veh_no INTEGER,
     maneuver INTEGER,
     maneuver_name TEXT,
-    PRIMARY KEY (st_case, veh_no, maneuver),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, maneuver),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -341,8 +341,8 @@ CREATE TABLE violatn (
     veh_no INTEGER,
     violation INTEGER,
     violation_name TEXT,
-    PRIMARY KEY (st_case, veh_no, violation),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, violation),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -352,8 +352,8 @@ CREATE TABLE vision (
     veh_no INTEGER,
     vision INTEGER,
     vision_name TEXT,
-    PRIMARY KEY (st_case, veh_no, vision),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, vision),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 
 );
@@ -364,8 +364,8 @@ CREATE TABLE pvehiclesf (
     state INTEGER,
     veh_no INTEGER,
     pvehiclesf INTEGER,
-    PRIMARY KEY (st_case, veh_no, pvehiclesf),
-    FOREIGN KEY (st_case, veh_no) REFERENCES parkwork(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, pvehiclesf),
+    FOREIGN KEY(st_case, veh_no) REFERENCES parkwork(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -381,7 +381,7 @@ CREATE TABLE cevent (
     soe INTEGER,
     vnumber2 INTEGER,
     aoi2 INTEGER,
-    PRIMARY KEY (st_case, eventnum),
+    PRIMARY KEY(st_case, eventnum),
     FOREIGN KEY(state) REFERENCES state(state),
     FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
@@ -392,8 +392,8 @@ CREATE TABLE vevent (
     veh_no INTEGER,
     eventnum INTEGER,
     veventnum INTEGER,
-    PRIMARY KEY (st_case, veh_no, veventnum),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, veventnum),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
@@ -402,21 +402,35 @@ CREATE TABLE vsoe (
     st_case INTEGER,
     veventnum INTEGER,
     veh_no INTEGER
-    PRIMARY KEY (st_case, veh_no, veventnum),
-    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
+    PRIMARY KEY(st_case, veh_no, veventnum),
+    FOREIGN KEY(st_case, veh_no) REFERENCES vehicle(st_case, veh_no),
     FOREIGN KEY(state) REFERENCES state(state)
 );
 
 -- PERSON LEVEL
 -----------------------------------------
-CREATE TABLE person ();
-CREATE TABLE drugs();
-CREATE TABLE personrf();
-CREATE TABLE race();
-CREATE TABLE nmcrash();
-CREATE TABLE nmdistract();
-CREATE TABLE nmimpair();
-CREATE TABLE nmprior();
+CREATE TABLE person (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    per_no INTEGER,
+    PRIMARY KEY(st_case, veh_no, per_no)
+    FOREIGN KEY(
+);
+CREATE TABLE drugs (
+);
+CREATE TABLE personrf (
+);
+CREATE TABLE race (
+);
+CREATE TABLE nmcrash (
+);
+CREATE TABLE nmdistract (
+);
+CREATE TABLE nmimpair (
+);
+CREATE TABLE nmprior (
+);
 
 -- NEW TABLES
 CREATE TABLE county (
