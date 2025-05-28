@@ -185,6 +185,73 @@ CREATE TABLE vehicle (
     FOREIGN KEY(state) REFERENCES state(state),
     FOREIGN KEY(st_case) REFERENCES accident(st_case)
 );
+CREATE TABLE parkwork (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    pve_forms INTEGER,
+    pday INTEGER,
+    phour INTEGER,
+    pminute INTEGER,
+    pharm_ev INTEGER,
+    pman_coll INTEGER,
+    pnumoccs INTEGER,
+    ptype INTEGER,
+    phit_run INTEGER,
+    preg_stat INTEGER,
+    powner INTEGER,
+    pvin TEXT,
+    pmodyear INTEGER,
+    pmake INTEGER,
+    pmodel INTEGER,
+    pbodytyp INTEGER,
+    picfinalbody INTEGER,
+    pgvwer_from INTEGER,
+    pgvwer_to INTEGER,
+    ptrailer INTEGER,
+    ptrlr1vin TEXT,
+    ptrlr2vin TEXT,
+    ptrlr3vin TEXT,
+    ptrlr1gvwr INTEGER,
+    ptrlr2gvwr INTEGER,
+    ptrlr3gvwr INTEGER,
+    pmcarr_id TEXT,
+    pmcarr_i1 TEXT,
+    pmcarr_i2 TEXT,
+    pv_config INTEGER,
+    pcargtyp INTEGER,
+    phaz_inv INTEGER,
+    phazplac INTEGER,
+    phaz_id INTEGER,
+    phaz_cno INTEGER,
+    phaz_rel INTEGER,
+    pbus_use INTEGER,
+    psp_use INTEGER,
+    pem_use INTEGER,
+    punderoverride INTEGER,
+    pimpact1 INTEGER,
+    pveh_sev INTEGER,
+    ptowed INTEGER,
+    pm_harm INTEGER,
+    pfire INTEGER,
+    pmake_mod INTEGER,
+    pvin_1 TEXT,
+    pvin_2 TEXT,
+    pvin_3 TEXT,
+    pvin_4 TEXT,
+    pvin_5 TEXT,
+    pvin_6 TEXT,
+    pvin_7 TEXT,
+    pvin_8 TEXT,
+    pvin_9 TEXT,
+    pvin_10 TEXT,
+    pvin_11 TEXT,
+    pvin_12 TEXT,
+    ptrailer INTEGER,
+    pdeaths INTEGER,
+    PRIMARY KEY (st_case, veh_no)
+
+);
 
 CREATE TABLE vehiclesf (
     st_case INTEGER,
@@ -193,14 +260,7 @@ CREATE TABLE vehiclesf (
     PRIMARY KEY (st_case, veh_no, vehiclesf),
     FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
 );
-CREATE TABLE damage();
-CREATE TABLE distract();
-CREATE TABLE drimpair();
-CREATE TABLE driverrf();
 
-CREATE TABLE factor();
-
-CREATE TABLE maneuver();
 CREATE TABLE vpicdecode (
     PRIMARY KEY (st_case, veh_no)
 );
@@ -208,9 +268,93 @@ CREATE TABLE vpictrailerdecode (
     PRIMARY KEY (st_case, veh_no)
 );
 
-CREATE TABLE pvehiclesf();
-CREATE TABLE violatn();
-CREATE TABLE vision();
+CREATE TABLE damage (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    damage INTEGER,
+    damage_name TEXT,
+    PRIMARY KEY (st_case, veh_no, damage),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE distract (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    drdistract INTEGER,
+    drdistract_name TEXT,
+    PRIMARY KEY (st_case, veh_no, drdistract),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE drimpair (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    drimpair INTEGER,
+    drimpair_name TEXT,
+    PRIMARY KEY (st_case, veh_no, drimpair),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE driverrf (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    driverrf INTEGER,
+    driverrf_name TEXT,
+    PRIMARY KEY (st_case, veh_no, driverrf),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE factor (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    vehiclecc INTEGER,
+    vehiclecc_name TEXT,
+    PRIMARY KEY (st_case, veh_no, vehiclecc),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+
+CREATE TABLE maneuver (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    maneuver INTEGER,
+    maneuver_name TEXT,
+    PRIMARY KEY (st_case, veh_no, maneuver),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE violatn (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    violation INTEGER,
+    violation_name TEXT,
+    PRIMARY KEY (st_case, veh_no, violation),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+);
+
+CREATE TABLE vision (
+    st_case INTEGER,
+    state INTEGER,
+    veh_no INTEGER,
+    vision INTEGER,
+    vision_name TEXT,
+    PRIMARY KEY (st_case, veh_no, vision),
+    FOREIGN KEY (st_case, veh_no) REFERENCES vehicle(st_case, veh_no)
+
+);
+
+
+CREATE TABLE pvehiclesf (
+
+);
+
 
 
 

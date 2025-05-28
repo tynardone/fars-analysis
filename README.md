@@ -182,3 +182,4 @@ Accident -> vehicle, parkwork
 
 - National Highway Traffic Safety Administration. *FARS/CRSS Coding and Validation Manual* (2023). U.S. Department of Transportation. [Link](<https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813695>)
 - National Highway Traffic Safety Administration. *Fatality Analysis Reporting System (FARS) Analytical User’s Manual, 1975–2023* (2023). U.S. Department of Transportation. [Link](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813706)
+- <https://github.com/fitnr/getfars/blob/master/sql/schema.sql>
