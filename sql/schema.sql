@@ -1,6 +1,7 @@
 
 
 -- CRASH LEVEL - Central Table accident
+-----------------------------------------
 CREATE TABLE accident (
     state INTEGER,
     st_case INTEGER PRIMARY KEY NOT NULL,
@@ -74,6 +75,7 @@ CREATE TABLE weather (
 
 
 -- VEHICLE LEVEL
+-----------------------------------------
 CREATE TABLE vehicle (
     state INTEGER,
     st_case INTEGER,
@@ -368,9 +370,8 @@ CREATE TABLE pvehiclesf (
 );
 
 
-
-
 -- EVENT LEVEL
+-----------------------------------------
 CREATE TABLE cevent (
     state INTEGER,
     st_case INTEGER,
@@ -407,6 +408,7 @@ CREATE TABLE vsoe (
 );
 
 -- PERSON LEVEL
+-----------------------------------------
 CREATE TABLE person ();
 CREATE TABLE drugs();
 CREATE TABLE personrf();
