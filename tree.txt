@@ -1,0 +1,32 @@
+.
+├── data_codes.json
+├── fars_data_unzipped
+│   ├── FARS2018National
+│   ├── FARS2019National
+│   ├── FARS2020National
+│   ├── FARS2021National
+│   └── FARS2022National
+├── fars_data_zip
+│   ├── FARS2018National.zip
+│   ├── FARS2019National.zip
+│   ├── FARS2020National.zip
+│   ├── FARS2021National.zip
+│   └── FARS2022National.zip
+├── LICENSE
+├── metadata.yml
+├── nhsta_fars.db
+├── notebooks
+│   └── unzip.ipynb
+├── README.md
+├── references
+│   ├── 2023 FARS:CRSS Coding and Validation Manual.pdf
+│   └── FARS Analytical User’s Manual, 1975-2023.pdf
+├── requirements.txt
+├── scripts
+│   └── data_download.py
+├── sql
+│   └── schema.sql
+├── tree.txt
+└── unzip.py
+
+12 directories, 18 files
