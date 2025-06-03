@@ -42,9 +42,6 @@ def setup_logging():
         )
 
 
-setup_logging()
-
-
 # Connect to database
 sq3.connect("nhsta_fars.db")
 
@@ -126,4 +123,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    setup_logging()
     asyncio.run(main())
