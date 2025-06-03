@@ -1,12 +1,18 @@
 import asyncio
+import json
 import logging
+import logging.config
 import sqlite3 as sq3
 import zipfile
 from pathlib import Path
 
 import httpx
 
-logging.basicConfig(level=logging.INFO)
+with open("logging_config.json", "r") as f:
+    config = json.load(f)
+    logging.config.dictConfig(config)
+
+
 logger = logging.getLogger(__name__)
 
 
