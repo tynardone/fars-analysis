@@ -28,16 +28,41 @@ DATA_DIR_UNZIP.mkdir(exist_ok=True)
 sq3.connect("nhsta_fars.db")
 
 
-def extract_zip_to_named_folder(zip_path: Path) -> None:
-    # Make folder name match zip file name (without extension)
-    folder_name = zip_path.stem
-    extract_to = DATA_DIR_UNZIP / folder_name
+def unzip_fars(zip_path: Path, dest_root: Path):
+    """
+    Unzips the `zip_path` zip file into a directory under `dest_root`.
+    Ensures that the contents of zip file end up under dest_root / zip_stem / ....
+    whether or not the zip itself contains the data files under a folder name.
+    """
 
-    extract_to.mkdir(exist_ok=True)
+    zip_stem = zip_path.stem  # e.g. FARS2018National
+    target_dir = dest_root / zip_stem
 
-    with zipfile.ZipFile(zip_path) as z:
-        # z.extractall(path=extract_to)
-        print(z.filelist)
+    with zipfile.ZipFile(zip_path, "r") as zf:
+        members: list[str] = zf.namelist()
+        common_prefix = Path(members[0]).parts[0]
+
+        # Check if all members of the zip file have the same prefix. If so the prefix will
+        # be removed to save just the file name
+        all_under_same_prefix: bool = all(
+            Path(m).parts[0] == common_prefix for m in members
+        )
+
+        if all_under_same_prefix:
+            for member in members:
+                member_path = Path(member)
+                parts = member_path.parts[1:]  # skip top-level folder
+                if parts:
+                    out_path = target_dir.joinpath(
+                        *parts
+                    )  # e.g. FARS2018National/accidents.csv
+                    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+                    with zf.open(member) as source, open(out_path, "wb") as target:
+                        target.write(source.read())
+
+        else:
+            zf.extractall(path=target_dir)
 
 
 async def download_zip(client: httpx.AsyncClient, year: int) -> None:
@@ -63,13 +88,10 @@ async def main():
     for zip_file in DATA_DIR_ZIP.glob("*.zip"):
         # for each ZIP file in the zip directory, extract it and save files
         # to a folder in the unzip directory
-        extract_zip_to_named_folder(zip_file)
+        unzip_fars(zip_file, DATA_DIR_UNZIP)
 
         logger.info(f"Unzipped {zip_file.name} to {DATA_DIR_UNZIP}")
 
 
 if __name__ == "__main__":
-    # asyncio.run(main())
-    with zipfile.ZipFile("fars_data_zip/FARS2022National.zip", "r") as zf:
-        for i in zf.filelist:
-            print(i, "\n")
+    asyncio.run(main())
