@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import logging.config
+import os
 import sqlite3 as sq3
 import zipfile
 from pathlib import Path
@@ -9,21 +10,39 @@ from typing import Iterable
 
 import httpx
 
-with open("logging_config.json", "r") as f:
-    config = json.load(f)
-    logging.config.dictConfig(config)
-
-
-logger = logging.getLogger(__name__)
-
-
 BASE_URL = "https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/National/FARS{year}NationalCSV.zip"
 DATA_DIR_ZIP = Path("fars_data_zip")
 DATA_DIR_UNZIP = Path("fars_data_unzipped")
-YEARS = range(2000, 2023)
+YEARS = range(1975, 2023)
 
 DATA_DIR_ZIP.mkdir(exist_ok=True)
 DATA_DIR_UNZIP.mkdir(exist_ok=True)
+
+LOGGING_CONFIG = "logging_config.json"
+
+# Ensure logging works no matter what
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+def setup_logging():
+    if os.path.exists(LOGGING_CONFIG):
+        try:
+            with open(LOGGING_CONFIG, "r") as f:
+                config = json.load(f)
+                logging.config.dictConfig(config)
+                logger.debug("Loaded custom logging config.")
+        except Exception:
+            logger.exception(
+                "Failed to load custom logging config. Using basic config."
+            )
+    else:
+        logger.warning(
+            f"Logging config file not found: {LOGGING_CONFIG}. Using basic config."
+        )
+
+
+setup_logging()
 
 
 # Connect to database
