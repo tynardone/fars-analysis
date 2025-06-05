@@ -4,6 +4,7 @@ import logging
 import logging.config
 import os
 import sqlite3 as sq3
+import time
 import zipfile
 from pathlib import Path
 from typing import Iterable
@@ -26,6 +27,7 @@ logger = logging.getLogger(__name__)
 
 
 def setup_logging():
+    logging.Formatter.converter = time.gmtime
     if os.path.exists(LOGGING_CONFIG):
         try:
             with open(LOGGING_CONFIG, "r") as f:

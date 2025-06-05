@@ -19,6 +19,8 @@ FARS contains no personally identifying information (e.g., names, addresses, SSN
 
 TODO
 
+`metadata.yml` contains information for each data element available in the FARS dataset (WIP).
+
 ## CSV Files
 
 ### Accident and Event Files
