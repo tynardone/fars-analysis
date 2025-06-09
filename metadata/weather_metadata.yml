@@ -1,0 +1,18 @@
+data_elements:
+  weather:
+    sas_name: WEATHER
+    ids: [C26]
+    element_name: Atmospheric Conditions
+    definition: >
+      This data element records the prevailing atmospheric conditions that existed at the time of the
+      crash as indicated in the case material
+    notes: >
+      Prior to 2020 this data element identified up to two values. If more than two atmospheric
+      conditions were reported, the two conditions that most affect visibility were selected.
+      Accident.WEATHER1 and Accident.WEATHER2 were the coded data elements, and
+      Accident.WEATHER was derived from these two. The two coded data elements were
+      discontinued after 2019 and moved to the Discontinued Accident Data Elements at the end of the
+      Accident Data File section.
+      Beginning in 2020 all applicable atmospheric conditions are selected and stored in this data file.
+      Only the derived data element WEATHER is still stored in the Accident data file and is now
+      derived from the responses in this data file using the same hierarchy

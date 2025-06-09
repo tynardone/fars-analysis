@@ -1,0 +1,701 @@
+data_elements:
+ # Crucial data elements
+  state:
+    sas_name: STATE
+    ids: [C1, V1, D1, PC1, P1, NM1]
+    element_name: State Number
+    definition: >
+      This data element identifies the State in which the crash occurred. The codes are from the
+      General Services Administration’s (GSA) publication of worldwide Geographic Location Codes
+      (GLC).s
+    notes: >
+      Applicable from 1975 to the present. Includes states, D.C., and Puerto Rico.
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          1: Alabama
+          2: Alaska
+          4: Arizona
+          5: Arkansas
+          6: California
+          8: Colorado
+          9: Connecticut
+          10: Delaware
+          11: District of Columbia
+          12: Florida
+          13: Georgia
+          15: Hawaii
+          16: Idaho
+          17: Illinois
+          18: Indiana
+          19: Iowa
+          20: Kansas
+          21: Kentucky
+          22: Louisiana
+          23: Maine
+          24: Maryland
+          25: Massachusetts
+          26: Michigan
+          27: Minnesota
+          28: Mississippi
+          29: Missouri
+          30: Montana
+          31: Nebraska
+          32: Nevada
+          33: New Hampshire
+          34: New Jersey
+          35: New Mexico
+          36: New York
+          37: North Carolina
+          38: North Dakota
+          39: Ohio
+          40: Oklahoma
+          41: Oregon
+          42: Pennsylvania
+          43: Puerto Rico
+          44: Rhode Island
+          45: South Carolina
+          46: South Dakota
+          47: Tennessee
+          48: Texas
+          49: Utah
+          50: Vermont
+          51: Virginia
+          53: Washington
+          54: West Virginia
+          55: Wisconsin
+          56: Wyoming
+  
+  st_case:
+    sas_name: ST_CASE
+    ids: [C2, V2, D2, PC2, P2, NM2]
+    element_name: Consecutive Number
+    definition: >
+      This data element is the unique case number assigned to each crash. It appears on each data file
+      and is used to merge information from the data files together.
+    notes: Two characters for state followed by four characters for case number
+
+  veh_no:
+    sas_name: VEH_NO
+    ids: [V3, D3, PC3, P3, NM4]
+    element_name: Vehicle Number
+    definition: >
+      This data element is the consecutive number assigned to each vehicle in the case. This data
+      element appears on each vehicle level data file and is used in conjunction with the ST_CASE
+      data element to merge information from vehicle level data files
+    notes: >
+      All vehicles have a positive integer. 0 is for non-motorists in the Person file.
+      There are no Vehicle records for non-motorists. ST_CASE and VEH_NO can be used to
+      merge the Person file to the Accident file, but using the vehicle file will remove 
+      non-motorists from the merged data.
+
+  per_no:
+    sas_name: PER_NO
+    ids: [P4, NM3]
+    element_name: Vehicle Number
+    definition: >
+      This data element is the consecutive number assigned to each person in the case (i.e., each
+      occupant, pedestrian, or non-motorists involved in the crash). This data element appears on each
+      person level data file and is used in conjunction with the ST_CASE data element (and sometimes
+      the VEH_NO data element) to merge information from person level data files
+    notes: null
+
+  eventnum:
+    sas_name: EVENTNUM
+    ids: [C18]
+    element_name: Event Number
+    definition: >
+      This data element is the consecutive number assigned to each harmful and non-harmful event for
+      this vehicle in chronological order
+    notes: null
+
+
+# Accident data 
+
+  peds:
+    sas_name: PEDS
+    ids: []
+    element_name: Number of Forms Submitted for Persons Not in Motor Vehicles
+    definition: >
+
+    notes: null
+
+
+  pernotmvit:
+    sas_name: PERNOTMVIT
+    ids: [C3A]
+    element_name: Number of Persons Not in Motor Vehicles In-Transport (MVIT)
+    definition: null
+    notes: null
+
+  ve_total:
+    sas_name: VE_TOTAL
+    ids: [C4]
+    element_name: Number of Vehicle Forms Submitted—ALL
+    definition: null
+    notes: null
+
+  ve_forms:
+    sas_name: VE_FORMS
+    ids: [C4A]
+    element_name: Number of Motor Vehicles In-Transport (MVIT)
+    definition: null
+    notes: null
+
+  pvh_invl:
+    sas_name: PVH_INVL
+    ids: [C4B]
+    element_name: Number of Parked/Working Vehicles
+    definition: null
+    notes: null
+
+  persons:
+    sas_name: PERSONS
+    ids: [C5]
+    element_name: Number of Person Forms Submitted
+    definition: null
+    notes: null
+
+  permvit:
+    sas_name: PERMVIT
+    ids: [C5A]
+    element_name: Number of Persons in Motor Vehicles In-Transport (MVIT)
+    definition: null
+    notes: null
+
+  county:
+    sas_name: COUNTY
+    ids: [C6]
+    element_name: County
+    definition: >
+      This data element records the location of the unstabilized event with regard to the County. The
+      codes are from the General Services Administration’s (GSA) publication of worldwide
+      Geographic Location Codes (GLC).
+    notes: null
+    attribute_codes:
+
+  city:
+    sas_name: CITY
+    ids: [C7]
+    element_name: City
+    definition: null
+    notes: null
+
+  month:
+    sas_name: MONTH
+    ids: [C8A]
+    element_name: Month of Crash
+    definition: This data element records the month in which the crash occurred.
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          99: Unkown
+          1: January
+          2: February
+          3: March
+          4: April
+          5: May
+          6: June
+          7: July
+          8: August
+          9: September
+          10: October
+          11: November
+          12: December
+
+
+  day:
+    sas_name: DAY
+    ids: [C8B]
+    element_name: Day of Crash
+    definition: This data element records the day of the month on which the crash occurred.
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          99: Unknown
+
+  day_week:
+    sas_name: DAY_WEEK
+    ids: [C8C]
+    element_name: Day of Week
+    definition: null
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          1: Sunday
+          2: Monday
+          3: Tuesday
+          4: Wednesday
+          5: Thursday
+          6: Friday
+          7: Saturday
+          9: Unkown
+
+
+  year:
+    sas_name: YEAR
+    ids: [C8D]
+    element_name: Year of Crash
+    definition: null
+    notes: null
+
+  hour:
+    sas_name: HOUR
+    ids: [C9A]
+    element_name: Hour of Crash
+    definition: null
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          88: Unknown
+          99: Unkown
+
+  minute:
+    sas_name: MINUTE
+    ids: [C9B]
+    element_name: Minute of Crash
+    definition: null
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes:
+          88: Unknown
+          99: Unknown
+
+
+
+  tway_id:
+    sas_name: TWAY_ID
+    ids: [C10]
+    element_name: Trafficway Identifier
+    definition: This data element records the trafficway on which the crash occurred
+    notes: >
+      Beginning in 2004 a second trafficway identifier was added to accommodate intersection and
+      intersection-related crashes where the officer provides the identifier for the second trafficway.
+      Prior to 2015 the Data Element ID was C13.
+
+
+  tway_id2:
+    sas_name: TWAY_ID2
+    ids: [C10]
+    element_name: Trafficway Identifier
+    definition: This data element records the trafficway on which the crash occurred
+    notes: >
+      Beginning in 2004 a second trafficway identifier was added to accommodate intersection and
+      intersection-related crashes where the officer provides the identifier for the second trafficway.
+      Prior to 2015 the Data Element ID was C13.
+
+  route:
+    sas_name: ROUTE
+    ids: [C11]
+    element_name: Route Signing
+    definition: >
+      This data element identifies the route signing designation of the trafficway on which the crash
+      occurred.
+    notes: CL_TWAY from 1975-1986. 
+    attribute_codes:
+      - start: 1975
+        end: 1980
+        codes:
+          1: Interstate
+          2: Other Limited Access
+          3: Other U.S. Route
+          4: Other State Route
+          5: Other Major Artery
+          6: County Road
+          7: Local Street
+          8: Other Road
+          9: Unknown
+
+      - start: 1981
+        end: 1986
+        codes:
+          1: Interstate
+          2: Other U.S. Route
+          3: Other State Route
+          4: County Road
+          5: Local Street
+          8: Other Road
+          9: Unknown
+      - start: 1987
+        end: 2022
+        codes:
+          1: Interstate
+          2: U.S. Highway
+          3: State Highway
+          4: County Road
+          5: Township
+          6: Municipal
+          7: Frontage Road
+          8: Other
+          9: Unknown
+      - start: 2023
+        end: null
+        codes:
+          0: Not Signed
+          1: Interstate
+          2: U.S. Highway
+          3: State Highway
+          4: County
+          5: Township
+          6: Municipal
+          10: Parkway or Forest Route Marker
+          11: Off-Interstate Business Marker
+          12: Secondary Route
+          13: Bureau of Indian Affairs
+          95: Other
+          96: Trafficway Not in State Inventory
+          99: Unknown
+  
+  rur_urb:
+    sas_name: RUR_URB
+    ids: [C12A]
+    element_name: Rural Urban Classification
+    definition: null
+    notes: null
+    attribute_codes:
+      - start: 2015
+        end: null
+        codes:
+          1: Rural
+          2: Urban
+          6: Trafficway Not in State Inventory
+          8: Not Reported
+          9: Unknown
+
+  func_sys:
+    sas_name: FUNC_SYS
+    ids: [C12B]
+    element_name: Functional System
+    definition: null
+    notes: null
+    attribute_codes:
+      - start: 2015
+        end: 2022
+        codes:
+          1: Interstate
+          2: Other Freeways and Expressways
+          3: Other Principal Arterial
+          4: Minor Arterial
+          5: Major Collector
+          6: Minor Collector
+          7: Local
+          96: Trafficway Not in State Inventory
+          98: Not Reported
+          99: Unknown
+
+
+
+  rd_owner:
+    sas_name: RD_OWNER
+    ids: [C13]
+    element_name: Ownership
+    definition: >
+      This data element identifies the entity that has legal ownership of the segment of the trafficway
+      on which the crash occurred. The entity that maintains the trafficway may differ from the owner in
+      some locations
+    notes: null
+    attribute_codes:
+      - start: 2015
+        end: null
+        codes:
+          1: State Highway Agency
+          2: County Highway Agency
+          3: Town or Township Highway Agency
+          4: City or Municipal Highway Agency
+          11: State Park, Forest or Reservation Agency
+          12: Local Park, Forest or Reservation Agency
+          21: Other State Agency
+          25: Other Local Agency
+          26: Private (Other Than Railroad)
+          27: Railroad
+          31: State Toll Road
+          32: Local Toll Authority
+          40: Other Public Instrumentality (i.e., Airport)
+          50: Indian Tribe Nation
+          60: Other Federal Agency
+          62: Bureau of Indian Affairs
+          63: Bureau of Fish and Wildlife
+          64: U.S. Forest Service
+          66: National Park Service
+          67: Tennessee Valley Authority
+          68: Bureau of Land Management
+          69: Bureau of Reclamation
+          70: Corps of Engineers
+          72: Air Force
+          74: Navy/Marines
+          80: Army
+          95: Other [Specify:] (Since 2023)
+
+  nhs:
+    sas_name: NHS
+    ids: [C14]
+    element_name: National Highway System
+    definition: >
+      This data element identifies whether this crash occurred on a trafficway that is part of the
+      National Highway System.
+    notes: null
+    attribute_codes:
+      - start: 1994
+        end: null
+        codes:
+          0: This Section IS NOT on the NHS
+          1: This Section IS ON the NHS
+          9: Unknown if This Section Is on the NHS
+
+  sp_jur:
+    sas_name: SP_JUR
+    ids: [C15]
+    element_name: Special Jurisdiction
+    definition: >
+      This data element identifies if the location on the trafficway where the crash occurred qualifies
+      as a Special Jurisdiction even though it may be patrolled by State, county or local police (e.g., all
+      State highways running through Indian Reservations are under the jurisdiction of the Indian
+      Reservation).
+    notes: null
+    attribute_codes:
+      - start: 1975
+        end: null
+        codes: 
+          0: No Special Jurisdiction (Includes National Forests Since 2008)
+          1: National Park Service
+          2: Military
+          3: Indian Reservation
+          4: College/University Campus
+          5: Other Federal Properties (Since 1977)
+          8: Other (Since 1976)
+          9: Unknown
+  milept:
+    sas_name: MILEPT
+    ids: [C16]
+    element_name: Milepoint
+    definition: null
+    notes: null
+
+  latitude:
+    sas_name: LATITUDE
+    ids: [C17A]
+    element_name: Latitude
+    definition: null
+    notes: null
+
+  longitud:
+    sas_name: LONGITUD
+    ids: [C17B]
+    element_name: Longitude
+    definition: null
+    notes: null
+
+  harm_ev:
+    sas_name: HARM_EV
+    ids: [C19]
+    element_name: First Harmful Event
+    definition: null
+    notes: null
+
+  man_coll:
+    sas_name: MAN_COLL
+    ids: [C20]
+    element_name: Manner of Collision of the First Harmful Event
+    definition: null
+    notes: null
+
+  reljct1:
+    sas_name: RELJCT1
+    ids: [C21A]
+    element_name: Relation to Junction—Within Interchange Area
+    definition: null
+    notes: null
+
+  reljct2:
+    sas_name: RELJCT2
+    ids: [C21B]
+    element_name: Relation to Junction—Specific Location
+    definition: null
+    notes: null
+
+  typ_int:
+    sas_name: TYP_INT
+    ids: [C22]
+    element_name: Type of Intersection
+    definition: null
+    notes: null
+
+  rel_road:
+    sas_name: REL_ROAD
+    ids: [C23]
+    element_name: Relation to Trafficway
+    definition: null
+    notes: null
+
+  wkr_zone:
+    sas_name: WRK_ZONE
+    ids: [C24]
+    element_name: Work Zone
+    definition: null
+    notes: null
+
+  lgt_cond:
+    sas_name: LGT_COND
+    ids: [C25]
+    element_name: Light Condition
+    definition: null
+    notes: null
+
+  weather:
+    sas_name: WEATHER
+    ids: [C26]
+    element_name: Atmospheric Conditions
+    definition: null
+    notes: null
+
+  sch_bus:
+    sas_name: SCH_BUS
+    ids: [C27]
+    element_name: School Bus Related
+    definition: null
+    notes: null
+
+  rail:
+    sas_name: RAIL
+    ids: [C28]
+    element_name: Rail Grade Crossing Identifier
+    definition: null
+    notes: null
+
+  not_hour:
+    sas_name: NOT_HOUR
+    ids: [C29A]
+    element_name: Hour of Notification
+    definition: null
+    notes: null
+
+  not_min:
+    sas_name: NOT_MIN
+    ids: [C29B]
+    element_name: Minute of Notification
+    definition: null
+    notes: null
+
+  arr_hour:
+    sas_name: ARR_HOUR
+    ids: [C30A]
+    element_name: Hour of Arrival at Scene
+    definition: null
+    notes: null
+
+  arr_min:
+    sas_name: ARR_MIN
+    ids: [C30B]
+    element_name: Minute of Arrival at Scene
+    definition: null
+    notes: null
+
+  hosp_hr:
+    sas_name: HOSP_HR
+    ids: [C31A]
+    element_name: Hour of EMS Arrival at Hospital
+    definition: null
+    notes: null
+
+  hosp_mn:
+    sas_name: HOSP_MN
+    ids: [C31B]
+    element_name: Minute of EMS Arrival at Hospital
+    definition: null
+    notes: null
+
+  fatals:
+    sas_name: FATALS
+    ids: [C101]
+    element_name: Fatalities
+    definition: null
+    notes: null
+
+  
+    weather1:
+    sas_name: WEATHER1
+    ids: []
+    element_name: Atmospheric Conditions (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  weather2:
+    sas_name: WEATHER2
+    ids: []
+    element_name: Atmospheric Conditions (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  fed_aid:
+    sas_name: FED_AID
+    ids: []
+    element_name: Federal Highway (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  hit_run:
+    sas_name: HIT_RUN
+    ids: []
+    element_name: Hit-and-Run (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  land_use:
+    sas_name: LAND_USE
+    ids: []
+    element_name: Land Use (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drunk_dr:
+    sas_name: DRUNK_DR
+    ids: []
+    element_name: Number of Drinking Drivers (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  cf1:
+    sas_name: CF1
+    ids: []
+    element_name: Related Factors—Crash Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  cf2:
+    sas_name: CF2
+    ids: []
+    element_name: Related Factors—Crash Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  cf3:
+    sas_name: CF3
+    ids: []
+    element_name: Related Factors—Crash Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  alignmnt:
+    sas_name: ALIGNMNT
+    ids: []
+    element_name: Roadway Alignment (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  road_fnc:
+    sas_name: ROAD_FNC
+    ids: []
+    element_name: Roadway Function Class (discontinued)
+    definition: null
+    notes: This variable has been discontinued.

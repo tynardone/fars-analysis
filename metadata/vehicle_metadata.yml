@@ -1,0 +1,1068 @@
+data_elements:
+  numoccs:
+    sas_name: NUMOCCS
+    ids: [V4]
+    element_name: Number of Occupants
+    definition: null
+    notes: null
+
+  unittype:
+    sas_name: UNITTYPE
+    ids: [V5]
+    element_name: Unit Type
+    definition: null
+    notes: null
+
+  hit_run:
+    sas_name: HIT_RUN
+    ids: [V6]
+    element_name: Hit-and-Run
+    definition: null
+    notes: null
+
+  reg_stat:
+    sas_name: REG_STAT
+    ids: [V7]
+    element_name: Registration State
+    definition: null
+    notes: null
+
+  owner:
+    sas_name: OWNER
+    ids: [V8]
+    element_name: Registered Vehicle Owner
+    definition: null
+    notes: null
+
+  vin:
+    sas_name: VIN
+    ids: [V9]
+    element_name: Vehicle Identification Number (VIN)
+    definition: null
+    notes: null
+
+  mod_year:
+    sas_name: MOD_YEAR
+    ids: [V10]
+    element_name: Vehicle Model Year
+    definition: null
+    notes: null
+
+  vpicmake:
+    sas_name: VPICMAKE
+    ids: [V11]
+    element_name: vPIC Make
+    definition: null
+    notes: null
+
+  vpicmodel:
+    sas_name: VPICMODEL
+    ids: [V12]
+    element_name: vPIC Model
+    definition: null
+    notes: null
+
+  vpicbodyclass:
+    sas_name: VPICBODYCLASS
+    ids: [V13]
+    element_name: vPIC Body Class
+    definition: null
+    notes: null
+
+  make:
+    sas_name: MAKE
+    ids: [V14]
+    element_name: NCSA Make
+    definition: null
+    notes: null
+
+  model:
+    sas_name: MODEL
+    ids: [V15]
+    element_name: NCSA Model
+    definition: null
+    notes: null
+
+  body_typ:
+    sas_name: BODY_TYP
+    ids: [V16]
+    element_name: NCSA Body Type
+    definition: null
+    notes: null
+
+  icfinalbody:
+    sas_name: ICFINALBODY
+    ids: [V17]
+    element_name: Final Stage Body Class
+    definition: null
+    notes: null
+
+  gvwr_from:
+    sas_name: GVWR_FROM
+    ids: [V18]
+    element_name: Power Unit Gross Vehicle Weight Rating (GVWR) - From
+    definition: null
+    notes: null
+
+  gvwr_to:
+    sas_name: GVWR_TO
+    ids: [V18]
+    element_name: Power Unit Gross Vehicle Weight Rating (GVWR) - To
+    definition: null
+    notes: null
+
+  tow_veh:
+    sas_name: TOW_VEH
+    ids: [V19]
+    element_name: Vehicle Trailing
+    definition: null
+    notes: null
+
+  trlr1vin:
+    sas_name: TRLR1VIN
+    ids: [V20]
+    element_name: Trailer Vehicle Identification Number (1st)
+    definition: null
+    notes: null
+
+  trlr2vin:
+    sas_name: TRLR2VIN
+    ids: [V20]
+    element_name: Trailer Vehicle Identification Number (2nd)
+    definition: null
+    notes: null
+
+  trlr3vin:
+    sas_name: TRLR3VIN
+    ids: [V20]
+    element_name: Trailer Vehicle Identification Number (3rd)
+    definition: null
+    notes: null
+
+  trlr1gvwr:
+    sas_name: TRLR1GVWR
+    ids: [V21]
+    element_name: Trailer Gross Vehicle Weight Rating (GVWR) - 1st
+    definition: null
+    notes: null
+
+  trlr2gvwr:
+    sas_name: TRLR2GVWR
+    ids: [V21]
+    element_name: Trailer Gross Vehicle Weight Rating (GVWR) - 2nd
+    definition: null
+    notes: null
+
+  trlr3gvwr:
+    sas_name: TRLR3GVWR
+    ids: [V21]
+    element_name: Trailer Gross Vehicle Weight Rating (GVWR) - 3rd
+    definition: null
+    notes: null
+
+  j_knife:
+    sas_name: J_KNIFE
+    ids: [V22]
+    element_name: Jackknife
+    definition: null
+    notes: null
+
+  mcarr_id:
+    sas_name: MCARR_ID
+    ids: [V23]
+    element_name: Motor Carrier Identification Number (MCID)
+    definition: null
+    notes: null
+
+  mcarr_i1:
+    sas_name: MCARR_I1
+    ids: [V23A]
+    element_name: MCID Issuing Authority
+    definition: null
+    notes: null
+
+  mcarr_i2:
+    sas_name: MCARR_I2
+    ids: [V23B]
+    element_name: MCID Identification Number
+    definition: null
+    notes: null
+
+  v_config:
+    sas_name: V_CONFIG
+    ids: [V24]
+    element_name: Vehicle Configuration
+    definition: null
+    notes: null
+
+  cargo_bt:
+    sas_name: CARGO_BT
+    ids: [V25]
+    element_name: Cargo Body Type
+    definition: null
+    notes: null
+
+  haz_inv:
+    sas_name: HAZ_INV
+    ids: [V26A]
+    element_name: Hazardous Material Involvement
+    definition: null
+    notes: null
+
+  haz_plac:
+    sas_name: HAZ_PLAC
+    ids: [V26B]
+    element_name: Hazardous Material Placard
+    definition: null
+    notes: null
+
+  haz_id:
+    sas_name: HAZ_ID
+    ids: [V26C]
+    element_name: Hazardous Material Identification Number
+    definition: null
+    notes: null
+
+  haz_cno:
+    sas_name: HAZ_CNO
+    ids: [V26D]
+    element_name: Hazardous Material Class Number
+    definition: null
+    notes: null
+
+  haz_rel:
+    sas_name: HAZ_REL
+    ids: [V26E]
+    element_name: Release of Hazardous Material from the Cargo Compartment
+    definition: null
+    notes: null
+
+  bus_use:
+    sas_name: BUS_USE
+    ids: [V27]
+    element_name: Bus Use
+    definition: null
+    notes: null
+
+  spec_use:
+    sas_name: SPEC_USE
+    ids: [V28]
+    element_name: Special Use
+    definition: null
+    notes: null
+
+  emer_use:
+    sas_name: EMER_USE
+    ids: [V29]
+    element_name: Emergency Motor Vehicle Use
+    definition: null
+    notes: null
+
+  trav_sp:
+    sas_name: TRAV_SP
+    ids: [V30]
+    element_name: Travel Speed
+    definition: null
+    notes: null
+
+  underoverride:
+    sas_name: UNDEROVERRIDE
+    ids: [V31]
+    element_name: Vehicle Underride/Override
+    definition: null
+    notes: null
+
+  rollover:
+    sas_name: ROLLOVER
+    ids: [V32]
+    element_name: Rollover
+    definition: null
+    notes: null
+
+  rolinloc:
+    sas_name: ROLINLOC
+    ids: [V33]
+    element_name: Location of Rollover
+    definition: null
+    notes: null
+
+  impact1:
+    sas_name: IMPACT1
+    ids: [V34A]
+    element_name: Area of Impacts—Initial Contact Point
+    definition: null
+    notes: null
+
+  deformed:
+    sas_name: DEFORMED
+    ids: [V35]
+    element_name: Extent of Damage
+    definition: null
+    notes: null
+
+  towed:
+    sas_name: TOWED
+    ids: [V36]
+    element_name: Vehicle Towed
+    definition: null
+    notes: null
+
+  m_harm:
+    sas_name: M_HARM
+    ids: [V38]
+    element_name: Most Harmful Event
+    definition: null
+    notes: null
+
+  fire_exp:
+    sas_name: FIRE_EXP
+    ids: [V39]
+    element_name: Fire Occurrence
+    definition: null
+    notes: null
+
+  ads_pres:
+    sas_name: ADS_PRES
+    ids: [V40A]
+    element_name: Automation System or Systems Present in Vehicle
+    definition: null
+    notes: null
+
+  ads_lev:
+    sas_name: ADS_LEV
+    ids: [V40B]
+    element_name: Highest Automation System Level Present in Vehicle
+    definition: null
+    notes: null
+
+  ads_eng:
+    sas_name: ADS_ENG
+    ids: [V40C]
+    element_name: Highest Automation System Level Engaged at Time of Crash
+    definition: null
+    notes: null
+
+  mak_mod:
+    sas_name: MAK_MOD
+    ids: [V100]
+    element_name: NCSA Make Model Combined
+    definition: null
+    notes: null
+
+  vin_1:
+    sas_name: VIN_1
+    ids: [V101]
+    element_name: VIN Character 1
+    definition: null
+    notes: null
+
+  vin_2:
+    sas_name: VIN_2
+    ids: [V102]
+    element_name: VIN Character 2
+    definition: null
+    notes: null
+
+  vin_3:
+    sas_name: VIN_3
+    ids: [V103]
+    element_name: VIN Character 3
+    definition: null
+    notes: null
+
+  vin_4:
+    sas_name: VIN_4
+    ids: [V104]
+    element_name: VIN Character 4
+    definition: null
+    notes: null
+
+  vin_5:
+    sas_name: VIN_5
+    ids: [V105]
+    element_name: VIN Character 5
+    definition: null
+    notes: null
+
+  vin_6:
+    sas_name: VIN_6
+    ids: [V106]
+    element_name: VIN Character 6
+    definition: null
+    notes: null
+
+  vin_7:
+    sas_name: VIN_7
+    ids: [V107]
+    element_name: VIN Character 7
+    definition: null
+    notes: null
+
+  vin_8:
+    sas_name: VIN_8
+    ids: [V108]
+    element_name: VIN Character 8
+    definition: null
+    notes: null
+
+  vin_9:
+    sas_name: VIN_9
+    ids: [V109]
+    element_name: VIN Character 9
+    definition: null
+    notes: null
+
+  vin_10:
+    sas_name: VIN_10
+    ids: [V110]
+    element_name: VIN Character 10
+    definition: null
+    notes: null
+
+  vin_11:
+    sas_name: VIN_11
+    ids: [V111]
+    element_name: VIN Character 11
+    definition: null
+    notes: null
+
+  vin_12:
+    sas_name: VIN_12
+    ids: [V112]
+    element_name: VIN Character 12
+    definition: null
+    notes: null
+
+  deaths:
+    sas_name: DEATHS
+    ids: [V150]
+    element_name: Fatalities in Vehicle
+    definition: null
+    notes: null
+
+  dr_drink:
+    sas_name: DR_DRINK
+    ids: [V151]
+    element_name: Driver Drinking
+    definition: null
+    notes: null
+
+  dr_pres:
+    sas_name: DR_PRES
+    ids: [D4]
+    element_name: Driver Presence
+    definition: null
+    notes: null
+
+  l_state:
+    sas_name: L_STATE
+    ids: [D5]
+    element_name: Driver’s License State
+    definition: null
+    notes: null
+
+  dr_zip:
+    sas_name: DR_ZIP
+    ids: [D6]
+    element_name: Driver’s ZIP Code
+    definition: null
+    notes: null
+
+  l_type:
+    sas_name: L_TYPE
+    ids: [D7A]
+    element_name: Non-CDL License Type
+    definition: null
+    notes: null
+
+  l_status:
+    sas_name: L_STATUS
+    ids: [D7B]
+    element_name: Non-CDL License Status
+    definition: null
+    notes: null
+
+  cdl_stat:
+    sas_name: CDL_STAT
+    ids: [D8]
+    element_name: Commercial Motor Vehicle License Status
+    definition: null
+    notes: null
+
+  l_endors:
+    sas_name: L_ENDORS
+    ids: [D9]
+    element_name: Compliance with CDL Endorsements
+    definition: null
+    notes: null
+
+  l_compl:
+    sas_name: L_COMPL
+    ids: [D10]
+    element_name: License Compliance with Class of Vehicle
+    definition: null
+    notes: null
+
+  l_restri:
+    sas_name: L_RESTRI
+    ids: [D11]
+    element_name: Compliance with License Restrictions
+    definition: null
+    notes: null
+
+  dr_hgt:
+    sas_name: DR_HGT
+    ids: [D12]
+    element_name: Driver Height
+    definition: null
+    notes: null
+
+  dr_wgt:
+    sas_name: DR_WGT
+    ids: [D13]
+    element_name: Driver Weight
+    definition: null
+    notes: null
+
+  prev_acc:
+    sas_name: PREV_ACC
+    ids: [D14]
+    element_name: Previous Recorded Crashes
+    definition: null
+    notes: null
+
+  prev_sus1:
+    sas_name: PREV_SUS1
+    ids: [D15A]
+    element_name: Previous Underage Administrative Per Se for BAC
+    definition: null
+    notes: null
+
+  prev_sus2:
+    sas_name: PREV_SUS2
+    ids: [D15B]
+    element_name: Previous Administrative Per Se for BAC (Not Underage)
+    definition: null
+    notes: null
+
+  prev_sus3:
+    sas_name: PREV_SUS3
+    ids: [D15C]
+    element_name: Previous Recorded Other Suspensions, Revocations, or Withdrawals
+    definition: null
+    notes: null
+
+  prev_dwi:
+    sas_name: PREV_DWI
+    ids: [D16]
+    element_name: Previous DWI Convictions
+    definition: null
+    notes: null
+
+  prev_spd:
+    sas_name: PREV_SPD
+    ids: [D17]
+    element_name: Previous Speeding Convictions
+    definition: null
+    notes: null
+
+  prev_oth:
+    sas_name: PREV_OTH
+    ids: [D18]
+    element_name: Previous Other Moving Violation Convictions
+    definition: null
+    notes: null
+
+  first_mo:
+    sas_name: FIRST_MO
+    ids: [D19A]
+    element_name: Month of Oldest Crash, Suspension or Conviction
+    definition: null
+    notes: null
+
+  first_yr:
+    sas_name: FIRST_YR
+    ids: [D19B]
+    element_name: Year of Oldest Crash, Suspension or Conviction
+    definition: null
+    notes: null
+
+  last_mo:
+    sas_name: LAST_MO
+    ids: [D20A]
+    element_name: Month of Most Recent Crash, Suspension or Conviction
+    definition: null
+    notes: null
+
+  last_yr:
+    sas_name: LAST_YR
+    ids: [D20B]
+    element_name: Year of Most Recent Crash, Suspension or Conviction
+    definition: null
+    notes: null
+
+  speedrel:
+    sas_name: SPEEDREL
+    ids: [D22]
+    element_name: Speeding Related
+    definition: null
+    notes: null
+
+  vtrafway:
+    sas_name: VTRAFWAY
+    ids: [PC5]
+    element_name: Trafficway Description
+    definition: null
+    notes: null
+
+  vnum_lan:
+    sas_name: VNUM_LAN
+    ids: [PC6]
+    element_name: Total Lanes in Roadway
+    definition: null
+    notes: null
+
+  vspd_lim:
+    sas_name: VSPD_LIM
+    ids: [PC7]
+    element_name: Speed Limit
+    definition: null
+    notes: null
+
+  valign:
+    sas_name: VALIGN
+    ids: [PC8]
+    element_name: Roadway Alignment
+    definition: null
+    notes: null
+  vprofile:
+    sas_name: VPROFILE
+    ids: [PC9]
+    element_name: Roadway Grade
+    definition: null
+    notes: null
+
+  vpavetyp:
+    sas_name: VPAVETYP
+    ids: [PC10]
+    element_name: Roadway Surface Type
+    definition: null
+    notes: null
+
+  vsurcond:
+    sas_name: VSURCOND
+    ids: [PC11]
+    element_name: Roadway Surface Condition
+    definition: null
+    notes: null
+
+  vtrafcon:
+    sas_name: VTRAFCON
+    ids: [PC12]
+    element_name: Traffic Control Device
+    definition: null
+    notes: null
+
+  vtcont_f:
+    sas_name: VTCONT_F
+    ids: [PC13]
+    element_name: Traffic Control Device Functioning
+    definition: null
+    notes: null
+
+  p_crash1:
+    sas_name: P_CRASH1
+    ids: [PC17]
+    element_name: Pre-Event Movement (Prior to Recognition of Critical Event)
+    definition: null
+    notes: null
+
+  p_crash2:
+    sas_name: P_CRASH2
+    ids: [PC19]
+    element_name: Critical Event—Precrash
+    definition: null
+    notes: null
+
+  p_crash3:
+    sas_name: P_CRASH3
+    ids: [PC20]
+    element_name: Attempted Avoidance Maneuver
+    definition: null
+    notes: null
+
+  pcrash4:
+    sas_name: PCRASH4
+    ids: [PC21]
+    element_name: Pre-Impact Stability
+    definition: null
+    notes: null
+
+  pcrash5:
+    sas_name: PCRASH5
+    ids: [PC22]
+    element_name: Pre-Impact Location
+    definition: null
+    notes: null
+
+  acc_type:
+    sas_name: ACC_TYPE
+    ids: [PC23]
+    element_name: Crash Type Configuration
+    definition: null
+    notes: null
+  axles:
+    sas_name: AXLES
+    ids: []
+    element_name: Axle (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  carbur:
+    sas_name: CARBUR
+    ids: []
+    element_name: Carburetion (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  avoid:
+    sas_name: AVOID
+    ids: []
+    element_name: Crash Avoidance Maneuver (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  displace:
+    sas_name: DISPLACE
+    ids: []
+    element_name: Cubic Inch Displacement (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vin_wgt:
+    sas_name: VIN_WGT
+    ids: []
+    element_name: Curb Weight (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  dr_train:
+    sas_name: DR_TRAIN
+    ids: []
+    element_name: Driver Training (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  d_vision1:
+    sas_name: D_VISION1
+    ids: []
+    element_name: Driver’s Vision Obscured by (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  fuelcode:
+    sas_name: FUELCODE
+    ids: []
+    element_name: Fuel Code (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  gvwr:
+    sas_name: GVWR
+    ids: []
+    element_name: Gross Vehicle Weight Rating (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  haz_carg:
+    sas_name: HAZ_CARG
+    ids: []
+    element_name: Hazardous Cargo (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  impact2:
+    sas_name: IMPACT2
+    ids: []
+    element_name: Most Damaged Area (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  mcycl_wt:
+    sas_name: MCYCL_WT
+    ids: []
+    element_name: Motorcycle Dry Weight (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  mcycl_ds:
+    sas_name: MCYCL_DS
+    ids: []
+    element_name: Motorcycle Engine Displacement (CC) (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  mcycl_ty:
+    sas_name: MCYCL_TY
+    ids: []
+    element_name: Motorcycle Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  cylinder:
+    sas_name: CYLINDER
+    ids: []
+    element_name: Number of Cylinders (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  mcycl_cy:
+    sas_name: MCYCL_CY
+    ids: []
+    element_name: Number of Motorcycle Engine Cycles (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  whldrwhl:
+    sas_name: WHLDRWHL
+    ids: []
+    element_name: Number of Wheels/Drive Wheels (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  tire_sze:
+    sas_name: TIRE_SZE
+    ids: []
+    element_name: Original Tire Size (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  prev_sus:
+    sas_name: PREV_SUS
+    ids: []
+    element_name: Previous Recorded Suspensions and Revocations (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  dr_sf1:
+    sas_name: DR_SF1
+    ids: []
+    element_name: Related Factors—Driver Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  dr_sf2:
+    sas_name: DR_SF2
+    ids: []
+    element_name: Related Factors—Driver Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  dr_sf3:
+    sas_name: DR_SF3
+    ids: []
+    element_name: Related Factors—Driver Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  dr_sf4:
+    sas_name: DR_SF4
+    ids: []
+    element_name: Related Factors—Driver Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  veh_sc1:
+    sas_name: VEH_SC1
+    ids: []
+    element_name: Related Factors—Vehicle Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+  veh_sc2:
+    sas_name: VEH_SC2
+    ids: []
+    element_name: Related Factors—Vehicle Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq1:
+    sas_name: SEQ1
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq2:
+    sas_name: SEQ2
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq3:
+    sas_name: SEQ3
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq4:
+    sas_name: SEQ4
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq5:
+    sas_name: SEQ5
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  seq6:
+    sas_name: SEQ6
+    ids: []
+    element_name: Sequence of Events (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  trk_wt:
+    sas_name: TRK_WT
+    ids: []
+    element_name: Truck Shipping Weight (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  trkwtvar:
+    sas_name: TRKWTVAR
+    ids: []
+    element_name: Truck Shipping Weight Variance (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  ton_rat:
+    sas_name: TON_RAT
+    ids: []
+    element_name: Truck Ton Rating (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vin_rest:
+    sas_name: VIN_REST
+    ids: []
+    element_name: Truck VIN Restraint Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  wgtcd_tr:
+    sas_name: WGTCD_TR
+    ids: []
+    element_name: Truck Weight Rating (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  underide:
+    sas_name: UNDERIDE
+    ids: []
+    element_name: Underride/Override (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  veh_man:
+    sas_name: VEH_MAN
+    ids: []
+    element_name: Vehicle Maneuver (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  impacts:
+    sas_name: IMPACTS
+    ids: []
+    element_name: Vehicle Role (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  violchg1:
+    sas_name: VIOLCHG1
+    ids: []
+    element_name: Violations Charged (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  violchg2:
+    sas_name: VIOLCHG2
+    ids: []
+    element_name: Violations Charged (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  violchg3:
+    sas_name: VIOLCHG3
+    ids: []
+    element_name: Violations Charged (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vin_bt:
+    sas_name: VIN_BT
+    ids: []
+    element_name: VIN Body Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vin_lngt:
+    sas_name: VIN_LNGT
+    ids: []
+    element_name: VIN Length (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vinmake:
+    sas_name: VINMAKE
+    ids: []
+    element_name: VIN Make (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vina_mod:
+    sas_name: VINA_MOD
+    ids: []
+    element_name: VIN Model (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vinmodyr:
+    sas_name: VINMODYR
+    ids: []
+    element_name: VIN Model Year (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  ser_tr:
+    sas_name: SER_TR
+    ids: []
+    element_name: VIN Truck Series (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  vintype:
+    sas_name: VINTYPE
+    ids: []
+    element_name: VIN Vehicle Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  whlbs_sh:
+    sas_name: WHLBS_SH
+    ids: []
+    element_name: Wheelbase Short (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  whlbs_lg:
+    sas_name: WHLBS_LG
+    ids: []
+    element_name: Wheelbase Long (discontinued)
+    definition: null
+    notes: This variable has been discontinued.

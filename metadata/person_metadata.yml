@@ -1,0 +1,350 @@
+data_elements:
+  age:
+    sas_name: AGE
+    ids: [P5, NM5]
+    element_name: Age
+    definition: null
+    notes: null
+
+  sex:
+    sas_name: SEX
+    ids: [P6, NM6]
+    element_name: Sex
+    definition: null
+    notes: null
+
+  per_typ:
+    sas_name: PER_TYP
+    ids: [P7, NM7]
+    element_name: Person Type
+    definition: null
+    notes: null
+
+  inj_sev:
+    sas_name: INJ_SEV
+    ids: [P8, NM8]
+    element_name: Injury Severity
+    definition: null
+    notes: null
+
+  seat_pos:
+    sas_name: SEAT_POS
+    ids: [P9]
+    element_name: Seating Position
+    definition: null
+    notes: null
+
+  rest_use:
+    sas_name: REST_USE
+    ids: [P10A]
+    element_name: Restraint System Use
+    definition: null
+    notes: null
+
+  rest_mis:
+    sas_name: REST_MIS
+    ids: [P10B]
+    element_name: Indication of Restraint System Misuse
+    definition: null
+    notes: null
+
+  helm_u:
+    sas_name: HELM_U
+    ids: [P11A]
+    element_name: Helmet Use
+    definition: null
+    notes: null
+
+
+    helm_mis:
+    sas_name: HELM_MIS
+    ids: [P11B]
+    element_name: Indication of Helmet Misuse
+    definition: null
+    notes: null
+
+  air_bag:
+    sas_name: AIR_BAG
+    ids: [P12]
+    element_name: Air Bag Deployed
+    definition: null
+    notes: null
+
+  ejection:
+    sas_name: EJECTION
+    ids: [P13]
+    element_name: Ejection
+    definition: null
+    notes: null
+
+  ej_path:
+    sas_name: EJ_PATH
+    ids: [P14]
+    element_name: Ejection Path
+    definition: null
+    notes: null
+
+  extricat:
+    sas_name: EXTRICAT
+    ids: [P15]
+    element_name: Extrication
+    definition: null
+    notes: null
+
+  drinking:
+    sas_name: DRINKING
+    ids: [P16, NM18]
+    element_name: Police Reported Alcohol Involvement
+    definition: null
+    notes: null
+
+  alc_status:
+    sas_name: ALC_STATUS
+    ids: [P17A, NM19A]
+    element_name: Alcohol Test Status
+    definition: null
+    notes: null
+
+  atst_typ:
+    sas_name: ATST_TYP
+    ids: [P17B, NM19B]
+    element_name: Alcohol Test Type
+    definition: null
+    notes: null
+
+  alc_res:
+    sas_name: ALC_RES
+    ids: [P17C, NM19C]
+    element_name: Alcohol Test Result
+    definition: null
+    notes: null
+
+  drugs:
+    sas_name: DRUGS
+    ids: [P18, NM20]
+    element_name: Police Reported Drug Involvement
+    definition: null
+    notes: null
+
+  dstatus:
+    sas_name: DSTATUS
+    ids: [P19A, NM21A]
+    element_name: Drug Test Status
+    definition: null
+    notes: null
+
+  hospital:
+    sas_name: HOSPITAL
+    ids: [P20, NM22]
+    element_name: Transported to First Medical Facility By
+    definition: null
+    notes: null
+
+  doa:
+    sas_name: DOA
+    ids: [P21, NM23]
+    element_name: Died at Scene/En Route
+    definition: null
+    notes: null
+
+  death_mo:
+    sas_name: DEATH_MO
+    ids: [P22A, NM24A]
+    element_name: Month of Death
+    definition: null
+    notes: null
+
+  death_da:
+    sas_name: DEATH_DA
+    ids: [P22B, NM24B]
+    element_name: Day of Death
+    definition: null
+    notes: null
+
+  death_yr:
+    sas_name: DEATH_YR
+    ids: [P22C, NM24C]
+    element_name: Year of Death
+    definition: null
+    notes: null
+
+  death_tm:
+    sas_name: DEATH_TM
+    ids: [P23, NM25]
+    element_name: Death Time
+    definition: null
+    notes: null
+
+  death_hr:
+    sas_name: DEATH_HR
+    ids: [P23A, NM25A]
+    element_name: Hour of Death
+    definition: null
+    notes: null
+
+  death_mn:
+    sas_name: DEATH_MN
+    ids: [P23B, NM25B]
+    element_name: Minute of Death
+    definition: null
+    notes: null
+
+  lag_hrs:
+    sas_name: LAG_HRS
+    ids: [P100A]
+    element_name: Lag Hours
+    definition: null
+    notes: null
+
+  lag_mins:
+    sas_name: LAG_MINS
+    ids: [P100B]
+    element_name: Lag Minutes
+    definition: null
+    notes: null
+
+  str_veh:
+    sas_name: STR_VEH
+    ids: [NM4]
+    element_name: Number of Motor Vehicle Striking NonMotorist
+    definition: null
+    notes: null
+
+  devtype:
+    sas_name: DEVTYPE
+    ids: [NM8]
+    element_name: Non-Motorist Device Type
+    definition: null
+    notes: null
+
+  devmotor:
+    sas_name: DEVMOTOR
+    ids: [NM9]
+    element_name: Non-Motorist Device Motorization
+    definition: null
+    notes: null
+
+  location:
+    sas_name: LOCATION
+    ids: [NM12]
+    element_name: Non-Motorist Location at Time of Crash
+    definition: null
+    notes: null
+
+  work_inj:
+    sas_name: WORK_INJ
+    ids: [SP2]
+    element_name: Fatal Injury at Work
+    definition: null
+    notes: null
+
+  hispanic:
+    sas_name: HISPANIC
+    ids: [SP3B]
+    element_name: Hispanic Origin
+    definition: null
+    notes: null
+
+  aut_rest:
+    sas_name: AUT_REST
+    ids: []
+    element_name: Automatic Restraint (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugtst1:
+    sas_name: DRUGTST1
+    ids: []
+    element_name: Drug Test Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugtst2:
+    sas_name: DRUGTST2
+    ids: []
+    element_name: Drug Test Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugtst3:
+    sas_name: DRUGTST3
+    ids: []
+    element_name: Drug Test Type (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugres1:
+    sas_name: DRUGRES1
+    ids: []
+    element_name: Drug Test Result (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugres2:
+    sas_name: DRUGRES2
+    ids: []
+    element_name: Drug Test Result (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  drugres3:
+    sas_name: DRUGRES3
+    ids: []
+    element_name: Drug Test Result (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  cert_no:
+    sas_name: CERT_NO
+    ids: []
+    element_name: Death Certificate Number (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  man_rest:
+    sas_name: MAN_REST
+    ids: []
+    element_name: Manual Restraint (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  alc_det:
+    sas_name: ALC_DET
+    ids: []
+    element_name: Method of Alcohol Determination by Police (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+  drug_det:
+    sas_name: DRUG_DET
+    ids: []
+    element_name: Method of Drug Determination by Police (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  race:
+    sas_name: RACE
+    ids: []
+    element_name: Race (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  p_sf1:
+    sas_name: P_SF1
+    ids: []
+    element_name: Related Factors—Person Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  p_sf2:
+    sas_name: P_SF2
+    ids: []
+    element_name: Related Factors—Person Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.
+
+  p_sf3:
+    sas_name: P_SF3
+    ids: []
+    element_name: Related Factors—Person Level (discontinued)
+    definition: null
+    notes: This variable has been discontinued.

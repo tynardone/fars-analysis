@@ -3,7 +3,6 @@ import json
 import logging
 import logging.config
 import os
-import sqlite3 as sq3
 import time
 import zipfile
 from pathlib import Path
@@ -42,10 +41,6 @@ def setup_logging():
         logger.warning(
             f"Logging config file not found: {LOGGING_CONFIG}. Using basic config."
         )
-
-
-# Connect to database
-sq3.connect("nhsta_fars.db")
 
 
 def unzip_fars(zip_path: Path, dest_root: Path):
